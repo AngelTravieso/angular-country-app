@@ -7,7 +7,7 @@ import { AboutPageComponent } from './shared/components/about-page/about-page.co
 const routes: Routes = [
   {
     // Segmento de la URL
-    path: 'home',
+    path: '',
     // Componente a renderizar en esa URL
     component: HomePageComponent,
   },
@@ -19,7 +19,7 @@ const routes: Routes = [
   {
     // Cualquier otra ruta redirige a /home
     path: '**',
-    redirectTo: 'home',
+    redirectTo: '',
   },
 ];
 
