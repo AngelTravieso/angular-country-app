@@ -3,6 +3,12 @@
 
 <ul class="list-group">
 
+  <!-- routerLink para cambiar ruta al presionar el botón  -->
+  <!-- routerLinkActive: clase que se aplicará cuando la URL activa coincida con la URL del navegador -->
+  <!--
+    routerLinkActiveOptions: objeto de configuración
+    exact: true -> para que haga match en su totalidad con la ruta que se quiere
+  -->
   <li routerLink=""
     routerLinkActive="active"
     [routerLinkActiveOptions]="{
@@ -16,6 +22,12 @@
     routerLinkActive="active"
     class="list-group-item">
     About Page
+  </li>
+
+  <li routerLink="contact"
+    routerLinkActive="active"
+    class="list-group-item">
+    Contact Page
   </li>
 
 </ul>
