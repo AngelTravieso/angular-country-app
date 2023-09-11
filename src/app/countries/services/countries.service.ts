@@ -11,7 +11,8 @@ export class CountriesService {
     private apiUrl: string = 'https://restcountries.com/v3.1';
 
     constructor(private http: HttpClient) { }
-    
+
+    // Buscar por capital
     searchCapital( term: string ): Observable<Country[]> {
         const url = `${ this.apiUrl }/capital/${ term }`;
         return this.http.get<Country[]>(url)
@@ -23,6 +24,24 @@ export class CountriesService {
                 //     return of([]);
                 // })
                 catchError( error => of([]) )
+            );
+    }
+
+    // Buscar por país
+    searchCountry( term: string): Observable<Country[]> {
+        const url = `${ this.apiUrl }/name/${ term }`;
+        return this.http.get<Country[]>( url )
+            .pipe(
+                catchError( error => of([] ))
+            );
+    }
+
+    // Buscar por región
+    searchRegion( region: string) : Observable<Country[]> {
+        const url = `${ this.apiUrl }/region/${ region }`
+        return this.http.get<Country[]>( url )
+            .pipe(
+                catchError( error => of([] ))
             );
     }
 
