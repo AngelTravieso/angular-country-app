@@ -18,6 +18,6 @@ import { CountryPageComponent } from './pages/country-page/country-page.componen
   imports: [
     CommonModule,
     CountriesRoutingModule,
-  ]
+  ],
 })
 export class CountriesModule { }

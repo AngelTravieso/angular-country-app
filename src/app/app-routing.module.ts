@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AboutPageComponent } from './shared/components/about-page/about-page.component';
 import { HomePageComponent } from './shared/components/home-page/home-page.component';
-import { ContactPageComponent } from './shared/components/contact-page/contact-page.component';
 
 // Definición de rutas
 const routes: Routes = [
@@ -18,8 +17,9 @@ const routes: Routes = [
     component: AboutPageComponent,
   },
   {
-    path: 'contact',
-    component: ContactPageComponent,
+    path: 'countries',
+    // component: ContactPageComponent,
+    loadChildren: () => import('./countries/countries.module').then( m => m.CountriesModule ),
   },
   {
     // Cualquier otra ruta redirige a /home
